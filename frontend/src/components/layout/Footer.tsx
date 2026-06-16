@@ -78,13 +78,15 @@ export default function Footer() {
           <motion.h5 variants={itemAnim} className="font-black text-xl mb-6 uppercase tracking-widest text-primary">Connect</motion.h5>
           <div className="flex gap-4">
             {[
-              { icon: <Linkedin size={24} />, href: settings?.linkedin || "#", id: "linkedin" },
-              { icon: <Mail size={24} />, href: settings?.email ? `mailto:${settings.email}` : "#", id: "email" },
-              { icon: <Instagram size={24} />, href: settings?.instagram || "#", id: "instagram" },
+              { icon: <Linkedin size={24} />, href: settings?.linkedin || "https://www.linkedin.com/company/codex-iter", id: "linkedin" },
+              { icon: <Mail size={24} />, href: settings?.email ? `mailto:${settings.email}` : "mailto:codexiter@gmail.com", id: "email" },
+              { icon: <Instagram size={24} />, href: settings?.instagram || "https://www.instagram.com/codexiter", id: "instagram" },
             ].map(({ icon, href, id }) => (
               <motion.a
                 key={id}
                 href={href}
+                target="_blank"
+                rel="noopener noreferrer"
                 variants={itemAnim}
                 whileHover={{ rotate: 15, scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
