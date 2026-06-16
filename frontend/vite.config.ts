@@ -10,7 +10,6 @@ export default defineConfig({
       hostname: 'https://codex-iter.in',
       dynamicRoutes: [
         '/',
-        '/about',
         '/blogs',
         '/events',
         '/team'

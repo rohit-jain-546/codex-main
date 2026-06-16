@@ -5,6 +5,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "../components/anima
 import { useEffect, useState } from "react";
 import { client } from "../sanity/client";
 import { urlFor } from "../sanity/image";
+import SEO from "../components/SEO";
 
 export default function Blogs() {
   const { hero } = mockData.blogs;
@@ -68,6 +69,10 @@ export default function Blogs() {
 
   return (
     <div className="bg-white min-h-screen">
+      <SEO 
+        title="Blogs | CODEX ITER" 
+        description="Read our latest technical blogs, insights, and updates from the Codex community." 
+      />
       <main className="px-6 md:px-20 py-12 max-w-7xl mx-auto w-full">
 
         {/* Header Section */}

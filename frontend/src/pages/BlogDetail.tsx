@@ -4,6 +4,7 @@ import { client } from "../sanity/client";
 import { urlFor } from "../sanity/image";
 import { PortableText } from "@portabletext/react";
 import { ScrollReveal } from "../components/animations/ScrollReveal";
+import SEO from "../components/SEO";
 
 export default function BlogDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -58,6 +59,13 @@ export default function BlogDetail() {
 
   return (
     <div className="bg-background-light min-h-screen font-display text-slate-900 pb-20">
+      <SEO 
+        title={`${post.title} | CODEX ITER`}
+        description={post.desc}
+        image={post.image ? urlFor(post.image).url() : undefined}
+        canonical={`https://codex-iter.in/blogs/${slug}`}
+        type="article"
+      />
       <div className="max-w-4xl mx-auto px-6 pt-32">
         <ScrollReveal>
           <Link to="/blogs" className="inline-flex items-center gap-2 text-primary font-bold uppercase text-sm mb-8 hover:underline">

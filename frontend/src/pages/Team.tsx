@@ -5,6 +5,7 @@ import TiltCard from "../components/animations/TiltCard";
 import { useEffect, useState, useRef } from "react";
 import { client } from "../sanity/client";
 import { urlFor } from "../sanity/image";
+import SEO from "../components/SEO";
 
 const prefersReduced =
   typeof window !== "undefined" &&
@@ -152,6 +153,10 @@ export default function Team() {
 
   return (
     <div className="bg-background-light min-h-screen font-display text-slate-900">
+      <SEO 
+        title="Team | CODEX ITER" 
+        description="Meet the force behind Codex ITER. The coordinators, members, and alumni." 
+      />
       <main className="max-w-7xl mx-auto px-6 md:px-20 py-16">
 
         {/* Hero */}
@@ -159,9 +164,9 @@ export default function Team() {
           <div className="inline-block bg-primary text-white px-4 py-1 mb-4 font-bold uppercase tracking-widest text-xs border-2 border-slate-900">
             {hero.label}
           </div>
-          <h2 className="text-6xl md:text-8xl font-black text-slate-900 uppercase leading-none tracking-tighter mb-6 font-display">
+          <h1 className="text-6xl md:text-8xl font-black text-slate-900 uppercase leading-none tracking-tighter mb-6 font-display">
             {hero.titlePart1}<br /><span className="text-primary italic">{hero.titlePart2}</span>
-          </h2>
+          </h1>
           <p className="text-xl md:text-2xl font-medium max-w-2xl text-slate-700 border-l-8 border-primary pl-6">
             {hero.description}
           </p>

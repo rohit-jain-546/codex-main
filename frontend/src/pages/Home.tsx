@@ -6,6 +6,7 @@ import { ScrollReveal, StaggerContainer, StaggerItem } from "../components/anima
 import main_logo from "../assets/main_logo.png"
 import { client } from "../sanity/client";
 import { urlFor } from "../sanity/image";
+import SEO from "../components/SEO";
 
 const prefersReduced =
   typeof window !== "undefined" &&
@@ -134,6 +135,10 @@ export default function Home() {
 
   return (
     <div>
+      <SEO 
+        title="CODEX ITER | A Decade of Technical Culture" 
+        description="Join the league of exceptional developers and help us build the next decade of engineering culture." 
+      />
       {/* ── HERO ────────────────────────────────────────────────── */}
       <section className="relative min-h-[90vh] flex items-center overflow-hidden border-b-4 border-slate-900 grid-pattern bg-background-light">
         <div className="max-w-6xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center w-full py-20">
@@ -147,7 +152,7 @@ export default function Home() {
               {hero.established}
             </motion.div>
 
-            <p className="text-5xl md:text-[5.5rem] font-black leading-[0.9] text-slate-900 mb-6 font-display">
+            <h1 className="text-5xl md:text-[5.5rem] font-black leading-[0.9] text-slate-900 mb-6 font-display">
               <AnimatedHeading text={hero.title} />{" "}
               <br />
               <span className="text-primary italic">
@@ -155,7 +160,7 @@ export default function Home() {
               </span>{" "}
               <br />
               <AnimatedHeading text={hero.subtitle2} />
-            </p>
+            </h1>
 
             {/* Typing subheading */}
             <p className="text-xl md:text-xl font-medium text-slate-800 mb-10 max-w-lg border-l-4 border-primary pl-6 min-h-16">
@@ -199,7 +204,7 @@ export default function Home() {
             <div className="absolute inset-0 bg-white border-4 border-slate-900 brutalist-shadow -rotate-2 flex items-center justify-center overflow-hidden">
               <div className="absolute inset-0 opacity-20 grid-pattern" />
               <div className="relative z-10 text-center">
-                <img src={main_logo} alt="" className="h-60 w-60" />
+                <img src={main_logo} alt="CODEX ITER Main Logo" className="h-60 w-60" />
                 <div className="mt-4 font-mono text-slate-900 font-bold bg-background-light p-2 tracking-widest text-sm">
                   {hero.loadingText}
                 </div>

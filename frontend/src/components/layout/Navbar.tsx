@@ -47,7 +47,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <div className="p-1">
-            {scrolled ? <img src={codex_light} alt="" className="h-10 w-9" /> : <img src={codex} alt="" className="h-10 w-9" />}
+            {scrolled ? <img src={codex_light} alt="CODEX ITER Logo" className="h-10 w-9" /> : <img src={codex} alt="CODEX ITER Logo" className="h-10 w-9" />}
           </div>
           <span className={`text-2xl font-black tracking-tighter transition-colors ${scrolled ? "text-white" : "text-slate-900"}`}>
             CODEX ITER

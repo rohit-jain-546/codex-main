@@ -6,6 +6,7 @@ import TiltCard from "../components/animations/TiltCard";
 import { useEffect, useState } from "react";
 import { client } from "../sanity/client";
 import { urlFor } from "../sanity/image";
+import SEO from "../components/SEO";
 
 const prefersReduced =
   typeof window !== "undefined" &&
@@ -194,6 +195,10 @@ export default function Events() {
 
   return (
     <div className="bg-background-light text-primary min-h-screen">
+      <SEO 
+        title="Events | CODEX ITER" 
+        description="Discover upcoming, ongoing, and past events at Codex ITER." 
+      />
       <main className="flex-1 px-6 py-12 md:px-20 max-w-7xl mx-auto w-full">
 
         {/* Header */}
@@ -201,9 +206,9 @@ export default function Events() {
           <div className="inline-block px-4 py-1 text-white text-xs font-black uppercase tracking-[0.3em] mb-4" style={{ backgroundColor: '#00B4D8' }}>
             {hero.label}
           </div>
-          <h2 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-6 font-display">
+          <h1 className="text-6xl md:text-8xl font-black uppercase leading-none tracking-tighter mb-6 font-display">
             {hero.titlePart1}<br /><span className="text-white bg-primary px-2">{hero.titlePart2}</span>
-          </h2>
+          </h1>
           <p className="max-w-xl text-lg font-bold leading-tight border-l-4 border-primary pl-4 uppercase">
             {hero.description}
           </p>
