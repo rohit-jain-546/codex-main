@@ -5,6 +5,7 @@ import Blogs from "./pages/Blogs"
 import Events from "./pages/Events"
 import Team from "./pages/Team"
 import BlogDetail from "./pages/BlogDetail"
+import Orientation from "./pages/Orientation"
 import Navbar from "./components/layout/Navbar"
 import Footer from "./components/layout/Footer"
 import TransitionOverlay from "./components/animations/TransitionOverlay"
@@ -26,6 +27,7 @@ function AnimatedRoutes() {
           <Route path="/events" element={<PageTransition><Events /></PageTransition>} />
           <Route path="/team" element={<PageTransition><Team /></PageTransition>} />
           <Route path="/blogs/:slug" element={<PageTransition><BlogDetail /></PageTransition>} />
+          <Route path="/orientation" element={<PageTransition><Orientation /></PageTransition>} />
         </Routes>
       </AnimatePresence>
     </>
